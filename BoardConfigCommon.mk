@@ -73,6 +73,8 @@ BOARD_HARDWARE_CLASS += device/bq/msm8916-common/cmhw/src
 # Add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _32
 
+MALLOC_SVELTE := true
+
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
