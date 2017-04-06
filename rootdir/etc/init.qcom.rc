@@ -370,3 +370,9 @@ service set_sn /system/bin/adjust_serialno setsn
 
 on property:sys.sn_set=1
     start set_sn
+
+# This fixes broken data connection on netmgrd crash
+on property:sys.boot_completed=1
+    restart ril-daemon
+    restart ril-daemon2
+    restart netmgrd
